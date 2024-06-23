@@ -3,6 +3,7 @@
   "type": "module",
   "module": "index.ts",
   "scripts": {
+    "benchmark": "bun run ./scripts/benchmark.ts",
     "build": "bun run ./scripts/build.ts",
     "lint": "eslint ."
   },
