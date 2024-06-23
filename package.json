@@ -1,6 +1,6 @@
 {
   "name": "tulis-writer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fast concurrent file writer powered by Bun",
   "keywords": [
     "file",
