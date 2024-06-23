@@ -1,7 +1,37 @@
 {
   "name": "tulis",
+  "version": "1.0.0",
+  "description": "Fast concurrent file writer powered by Bun",
+  "keywords": [
+    "file",
+    "writer",
+    "async",
+    "asynchronous",
+    "fast",
+    "race",
+    "condition",
+    "concurrent"
+  ],
+  "homepage": "https://github.com/ericc-ch/tulis",
+  "bugs": {
+    "url": "https://github.com/ericc-ch/tulis/issues"
+  },
+  "repository": {
+    "type": ""
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Erick Christian",
+    "email": "erickchristian48@gmail.com",
+    "url": "https://ericc-ch.github.io"
+  },
   "type": "module",
+  "exports": "./dist/index.js",
   "module": "index.ts",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "benchmark": "bun run ./scripts/benchmark.ts",
     "build": "bun run ./scripts/build.ts",
