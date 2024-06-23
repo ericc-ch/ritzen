@@ -2,6 +2,12 @@
 
 > Fast concurrent file writer, similar to [steno](https://github.com/typicode/steno)
 
+## Installation
+
+```bash
+bun install tulis-writer
+```
+
 ## Features
 
 - Fast, uses `Bun.write` (Node currently not supported)
@@ -65,7 +71,7 @@ Please write an issue if missed something
 Yes, when Bun supports [polyfilling `bun:` modules for Node](https://bun.sh/docs/bundler#target)
 
 **Why this instead of steno?**
-tulis uses `Bun.write` instead of Node's `writeFile`, which is faster. See [benchmarks](#Benchmark)
+tulis uses `Bun.write` instead of Node's `writeFile`, which is faster. See [benchmarks](#benchmark)
 
 ## Credits
 
