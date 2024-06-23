@@ -34,7 +34,19 @@ await Promise.all(promises);
 `bun run benchmark` (see `scripts/benchmark.ts`)
 
 ```plaintext
-(IN PROGRESS)
+Write 1KB data to the same file x 1000
+[85.90ms] fs
+[5.22ms] tulis
+
+Write 1MB data to the same file x 1000
+[722.67ms] fs
+[5.40ms] tulis
+
+Write 10MB data to the same file x 1000
+[5.71s] fs
+[35.41ms] tulis
+
+Check if the files are identical:  ✓
 ```
 
 ## FAQ
@@ -53,7 +65,7 @@ Please write an issue if missed something
 Yes, when Bun supports [polyfilling `bun:` modules for Node](https://bun.sh/docs/bundler#target)
 
 **Why this instead of steno?**
-tulis uses `Bun.write` instead of Node's `writeFile`, which is faster. See [benchmarks](#benchmark)
+tulis uses `Bun.write` instead of Node's `writeFile`, which is faster. See [benchmarks](#Benchmark)
 
 ## Credits
 
