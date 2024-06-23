@@ -1,5 +1,5 @@
 {
-  "name": "tulis",
+  "name": "@tulis/writer",
   "version": "1.0.0",
   "description": "Fast concurrent file writer powered by Bun",
   "keywords": [
