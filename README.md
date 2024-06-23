@@ -12,7 +12,7 @@ bun install tulis-writer
 
 - Fast, uses `Bun.write` (Node currently not supported)
 - Type safe, written in TypeScript
-- Lightweight (Haven't checked the size)
+- Lightweight (~4kB)
 - Handles race condition and unnecessary writes
 
 ## Usage
@@ -66,6 +66,7 @@ Please write an issue if missed something
 | No Race Conditions | ✓     | ✓     |
 | Atomic Writes      | ✗     | ✓     |
 | Automatic Retry    | ✗     | ✓     |
+| Package Size       | 4kB   | 6kB   |
 
 **Will Node.js get supported?**
 Yes, when Bun supports [polyfilling `bun:` modules for Node](https://bun.sh/docs/bundler#target)
