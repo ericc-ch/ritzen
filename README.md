@@ -69,4 +69,4 @@ tulis uses `Bun.write` instead of Node's `writeFile`, which is faster. See [benc
 
 ## Credits
 
-Heavily inspired by [steno](https://github.com/typicode/steno) by [typicode](https://github.com/typicode)
+Heavily inspired by [steno](https://github.com/typicode/steno)
