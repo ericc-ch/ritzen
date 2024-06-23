@@ -1,5 +1,4 @@
 import type { BunFile } from "bun";
-import { file as bunFile } from "bun";
 
 export class Writer {
   private queue: string | undefined;
@@ -9,7 +8,7 @@ export class Writer {
   private file: BunFile;
 
   constructor(file: string | URL) {
-    this.file = bunFile(file);
+    this.file = Bun.file(file);
   }
 
   private async _write() {
