@@ -1,5 +1,5 @@
 {
-  "name": "tulis-writer",
+  "name": "ritzen",
   "version": "1.0.2",
   "description": "Fast concurrent file writer powered by Bun",
   "keywords": [
@@ -12,9 +12,9 @@
     "condition",
     "concurrent"
   ],
-  "homepage": "https://github.com/ericc-ch/tulis",
+  "homepage": "https://github.com/ericc-ch/ritzen",
   "bugs": {
-    "url": "https://github.com/ericc-ch/tulis/issues"
+    "url": "https://github.com/ericc-ch/ritzen/issues"
   },
   "repository": {
     "type": ""

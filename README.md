@@ -1,11 +1,11 @@
-# Tulis
+# Ritzen
 
 > Fast concurrent file writer, similar to [steno](https://github.com/typicode/steno)
 
 ## Installation
 
 ```bash
-bun install tulis-writer
+bun install ritzen-writer
 ```
 
 ## Features
@@ -18,7 +18,7 @@ bun install tulis-writer
 ## Usage
 
 ```typescript
-import { Writer } from "tulis";
+import { Writer } from "ritzen";
 
 // Creates a new writer instance
 const writer = new Writer("file.txt");
@@ -26,11 +26,11 @@ const writer = new Writer("file.txt");
 // Also supports file URL
 const writerUrl = new Writer("file://file.txt");
 
-// tulis will handle the race condition
+// ritzen will handle the race condition
 // Writes are always in order
 const promises = Array(1000)
   .fill(0)
-  .map((_, i) => tulis.write(`${data}${i}`));
+  .map((_, i) => ritzen.write(`${data}${i}`));
 
 await Promise.all(promises);
 ```
@@ -42,15 +42,15 @@ await Promise.all(promises);
 ```plaintext
 Write 1KB data to the same file x 1000
 [85.90ms] fs
-[5.22ms] tulis
+[5.22ms] ritzen
 
 Write 1MB data to the same file x 1000
 [722.67ms] fs
-[5.40ms] tulis
+[5.40ms] ritzen
 
 Write 10MB data to the same file x 1000
 [5.71s] fs
-[35.41ms] tulis
+[35.41ms] ritzen
 
 Check if the files are identical:  ✓
 ```
@@ -60,7 +60,7 @@ Check if the files are identical:  ✓
 **Comparison with steno**
 Please write an issue if missed something
 
-| Feature            | tulis | steno |
+| Feature            | ritzen | steno |
 | ------------------ | ----- | ----- |
 | TypeScript         | ✓     | ✓     |
 | No Race Conditions | ✓     | ✓     |
@@ -72,7 +72,7 @@ Please write an issue if missed something
 Yes, when Bun supports [polyfilling `bun:` modules for Node](https://bun.sh/docs/bundler#target)
 
 **Why this instead of steno?**
-tulis uses `Bun.write` instead of Node's `writeFile`, which is faster. See [benchmarks](#benchmark)
+ritzen uses `Bun.write` instead of Node's `writeFile`, which is faster. See [benchmarks](#benchmark)
 
 ## Credits
 

@@ -5,7 +5,7 @@ import { Writer } from "./Writer";
 
 const dirPath = path.join(process.cwd(), ".test");
 
-describe("tulis", () => {
+describe("ritzen", () => {
   beforeAll(async () => {
     await fs.mkdir(dirPath);
   });

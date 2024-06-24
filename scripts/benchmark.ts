@@ -13,9 +13,9 @@ const dirPath = path.join(process.cwd(), ".benchmark");
 await fs.mkdir(dirPath);
 
 const fsFile = path.join(dirPath, "fs.txt");
-const tulisFile = path.join(dirPath, "tulis.txt");
+const ritzenFile = path.join(dirPath, "ritzen.txt");
 
-const tulis = new Writer(tulisFile);
+const ritzen = new Writer(ritzenFile);
 
 async function fsBenchmark(data: string) {
   console.time("fs");
@@ -25,33 +25,33 @@ async function fsBenchmark(data: string) {
   console.timeEnd("fs");
 }
 
-async function tulisBenchmark(data: string) {
-  console.time("tulis");
+async function ritzenBenchmark(data: string) {
+  console.time("ritzen");
   const promises = Array(1000)
     .fill(0)
-    .map((_, i) => tulis.write(`${data}${i}`));
+    .map((_, i) => ritzen.write(`${data}${i}`));
   await Promise.all(promises);
-  console.timeEnd("tulis");
+  console.timeEnd("ritzen");
 }
 
 console.log("Write 1KB data to the same file x 1000");
 await fsBenchmark(KB_1);
-await tulisBenchmark(KB_1);
+await ritzenBenchmark(KB_1);
 
 console.log("Write 1MB data to the same file x 1000");
 await fsBenchmark(MB_1);
-await tulisBenchmark(MB_1);
+await ritzenBenchmark(MB_1);
 
 console.log("Write 10MB data to the same file x 1000");
 await fsBenchmark(MB_10);
-await tulisBenchmark(MB_10);
+await ritzenBenchmark(MB_10);
 
 const fsResult = await Bun.file(fsFile).text();
-const tulisResult = await Bun.file(tulisFile).text();
+const ritzenResult = await Bun.file(ritzenFile).text();
 
 console.log(
   "Check if the files are identical: ",
-  fsResult === tulisResult ? "✓" : "✗"
+  fsResult === ritzenResult ? "✓" : "✗"
 );
 
 await fs.rm(dirPath, { force: true, recursive: true });
