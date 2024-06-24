@@ -5,7 +5,7 @@
 ## Installation
 
 ```bash
-bun install ritzen-writer
+bun install ritzen
 ```
 
 ## Features
