@@ -1,6 +1,6 @@
 {
   "name": "ritzen",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Fast concurrent file writer powered by Bun",
   "keywords": [
     "file",
