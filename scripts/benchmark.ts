@@ -10,6 +10,8 @@ const MB_1 = Buffer.alloc(MB, "x").toString();
 const MB_10 = Buffer.alloc(MB * 10, "x").toString();
 
 const dirPath = path.join(process.cwd(), ".benchmark");
+
+await fs.rm(dirPath, { force: true, recursive: true });
 await fs.mkdir(dirPath);
 
 const fsFile = path.join(dirPath, "fs.txt");
@@ -53,5 +55,3 @@ console.log(
   "Check if the files are identical: ",
   fsResult === ritzenResult ? "✓" : "✗"
 );
-
-await fs.rm(dirPath, { force: true, recursive: true });
