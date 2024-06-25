@@ -9,6 +9,6 @@ await fs.rm(dir, { force: true, recursive: true });
 await Bun.build({
   outdir: dir,
   entrypoints: ["src/index.ts"],
-  target: "node",
+  target: "bun",
   plugins: [dts()],
 });
