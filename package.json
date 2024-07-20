@@ -37,13 +37,13 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@eslint/js": "^9.5.0",
+    "@eslint/js": "^9.7.0",
     "@types/bun": "latest",
     "@types/eslint__js": "^8.42.3",
     "bun-plugin-dts": "^0.2.3",
-    "eslint": "^9.5.0",
-    "typescript": "^5.5.2",
-    "typescript-eslint": "^7.13.1",
+    "eslint": "^9.7.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.1",
     "unbuild": "^2.0.0"
   }
 }
